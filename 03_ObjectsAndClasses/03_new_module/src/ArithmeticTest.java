@@ -1,9 +1,9 @@
 public class ArithmeticTest {
-    public static void main(String args[]){
-        new Arithmetic(10,200);
-        System.out.println(Arithmetic.sumNumbers());
-        System.out.println(Arithmetic.multiplicationNumbers());
-        Arithmetic.findMaxNumber();
-        Arithmetic.findMinNumber();
+    public static void main(String[] args) {
+        Arithmetic arithmetic = new Arithmetic(10,100);
+        System.out.println(arithmetic.sumNumbers());
+        System.out.println(arithmetic.multiplicationNumbers());
+        arithmetic.findMaxNumber();
+        arithmetic.findMinNumber();
     }
 }
