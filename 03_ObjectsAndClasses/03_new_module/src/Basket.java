@@ -5,6 +5,8 @@ public class Basket {
     private int totalPrice = 0;
     private int limit;
     private double totalWeight = 0;
+    private static int totalAllBasketPrice = 0;
+    private static int totalProductCount = 0;
 
     public Basket() {
         increaseCount(1);
@@ -62,6 +64,32 @@ public class Basket {
         items = items + "\n" + name + " - " +
             count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
+        increaseTotalAllBasketPrice(price, count);
+        increaseTotalProductCount(count);
+    }
+
+    public static void increaseTotalAllBasketPrice(int price, int count){
+        Basket.totalAllBasketPrice += price * count;
+    }
+
+    public static void increaseTotalProductCount(int count){
+        Basket.totalProductCount += count;
+    }
+
+    public static void getAveragePriceOfProduct(){
+        if (totalProductCount == 0){
+            System.out.println("Operation is impossible");
+            return;
+        }
+        System.out.println((double) totalAllBasketPrice / totalProductCount);
+    }
+
+    public static void getAveragePriceOfBasket(){
+        if (count == 0){
+            System.out.println("Operation is impossible");
+            return;
+        }
+        System.out.println((double) totalAllBasketPrice / count);
     }
 
     public void clear() {

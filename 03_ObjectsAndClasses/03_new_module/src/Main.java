@@ -7,5 +7,13 @@ public class Main {
         System.out.println(basket.getTotalWeight());
         basket.add("Meat", 100, 2, 1500.0);
         System.out.println(basket.getTotalWeight());
+        System.out.println(Basket.getCount());
+        Basket.getAveragePriceOfProduct();
+        Basket.getAveragePriceOfBasket();
+        Basket mashaBasket = new Basket();
+        mashaBasket.add("Sugar", 100, 3, 2000.0);
+        System.out.println(Basket.getCount());
+        Basket.getAveragePriceOfProduct();
+        Basket.getAveragePriceOfBasket();
     }
 }
