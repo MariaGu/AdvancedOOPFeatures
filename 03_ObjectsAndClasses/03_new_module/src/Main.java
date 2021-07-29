@@ -1,6 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println(Basket.getAveragePriceOfBasket());
+        System.out.println(Basket.getAveragePriceOfProduct());
         Basket basket = new Basket();
         basket.add("Milk", 40);
         basket.print("Milk");
@@ -13,7 +15,7 @@ public class Main {
         Basket mashaBasket = new Basket();
         mashaBasket.add("Sugar", 100, 3, 2000.0);
         System.out.println(Basket.getCount());
-        Basket.getAveragePriceOfProduct();
-        Basket.getAveragePriceOfBasket();
+        System.out.println(Basket.getAveragePriceOfBasket());
+        System.out.println(Basket.getAveragePriceOfProduct());
     }
 }
