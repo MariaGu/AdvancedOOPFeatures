@@ -4,11 +4,11 @@ public class ContainerTest {
         container.addCount(5672);
         System.out.println(container.getCount());
 
-        for (int i = 1040; i < 1106; i++){
-            if (i == 1104) continue;
-            char c = (char) i;
-            System.out.println(i + " - " + c);
+        String russianLetters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
+        for (int i = 0; i < russianLetters.length(); i++){
+            char c = russianLetters.charAt(i);
+            System.out.println(c + " соотвествует коду " + (int) c);
         }
-        System.out.println("1025 - " + (char) 1025);
     }
 }
