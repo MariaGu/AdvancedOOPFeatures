@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TrucksContainersAndBoxes" />
         <module name="GeometryCalculator" />
+        <module name="Birthdays" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Birthdays" target="11" />
       <module name="GeometryCalculator" target="11" />
       <module name="TrucksContainersAndBoxes" target="11" />
     </bytecodeTargetLevel>
