@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TrucksContainersAndBoxes" />
+        <module name="Periods" />
         <module name="GeometryCalculator" />
         <module name="Birthdays" />
       </profile>
@@ -14,6 +15,7 @@
     <bytecodeTargetLevel>
       <module name="Birthdays" target="11" />
       <module name="GeometryCalculator" target="11" />
+      <module name="Periods" target="11" />
       <module name="TrucksContainersAndBoxes" target="11" />
     </bytecodeTargetLevel>
   </component>
