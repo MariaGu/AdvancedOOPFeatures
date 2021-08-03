@@ -6,36 +6,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String boxes = scanner.nextLine();
         int numberBoxes = Integer.parseInt(boxes);
-        int boxesInContainer = 27;
-        int containersInTruck = 12;
-        int boxesInTruck = boxesInContainer * containersInTruck;
-        int numberContainers = ((numberBoxes % boxesInContainer) == 0) ? numberBoxes / boxesInContainer : 1 + (numberBoxes / boxesInContainer);
-        int numberTrucks = (numberBoxes % boxesInTruck) == 0 ? numberBoxes / boxesInTruck : 1 + numberBoxes / boxesInTruck;
+        final int BOXES_IN_CONTAINERS = 27;
+        final int CONTAINERS_IN_TRUCK = 12;
+        int numberTrucks = 0;
+        int numberContainers = 0;
 
-        int k = 1;
-        int j = 1;
-        for (int i = 1; i <= numberTrucks; i++) {
-            System.out.println("Грузовик: " + i);
-            for (; j <= numberContainers; j++) {
-                System.out.println("\tКонтейнер: " + j);
-                for (; k <= numberBoxes; k++) {
-                    System.out.println("\t\tЯщик: " + k);
-                    if (k % 27 == 0) {
-                        k++;
-                        break;
-                    }
-
-                }
-                if (j % 12 == 0) {
-                    j++;
-                    break;
-                }
+        for (int i = 1; i <= numberBoxes; i++) {
+            if ((i == 1) ||  (((i-1) % (BOXES_IN_CONTAINERS * CONTAINERS_IN_TRUCK)) == 0)) {
+                System.out.println("Грузовик: " + ++numberTrucks);
             }
+            if ((i == 1) ||  (((i-1) % BOXES_IN_CONTAINERS) == 0)) {
+                System.out.println("\tКонтейнер: " + ++numberContainers);
+            }
+            System.out.println("\t\tЯщик: " + i);
         }
 
         System.out.println("Необходимо:" + System.lineSeparator()
                 + "грузовиков - " + numberTrucks + " шт." + System.lineSeparator()
                 + "контейнеров - " + numberContainers + " шт." + System.lineSeparator());
-
     }
 }
