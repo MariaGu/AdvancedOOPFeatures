@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TrucksContainersAndBoxes" />
         <module name="Periods" />
+        <module name="FullNameFormatter" />
         <module name="GeometryCalculator" />
         <module name="Birthdays" />
         <module name="TotalEarningsCalculator" />
@@ -15,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Birthdays" target="11" />
+      <module name="FullNameFormatter" target="11" />
       <module name="GeometryCalculator" target="11" />
       <module name="Periods" target="11" />
       <module name="TotalEarningsCalculator" target="11" />
