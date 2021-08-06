@@ -10,12 +10,14 @@
         <module name="Periods" />
         <module name="GeometryCalculator" />
         <module name="Birthdays" />
+        <module name="TotalEarningsCalculator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Birthdays" target="11" />
       <module name="GeometryCalculator" target="11" />
       <module name="Periods" target="11" />
+      <module name="TotalEarningsCalculator" target="11" />
       <module name="TrucksContainersAndBoxes" target="11" />
     </bytecodeTargetLevel>
   </component>
