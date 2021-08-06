@@ -5,8 +5,13 @@ public class Main {
   }
 
   public static String splitTextIntoWords(String text) {
-    //TODO реализуйте метод
-    return "";
+    String[] words = text.split("[ ,.]");
+    String output = "";
+    for (int i = 0; i < words.length; i++){
+      output += words[i] + System.lineSeparator();
+    }
+    System.out.println(output);
+    return output;
   }
 
 }
