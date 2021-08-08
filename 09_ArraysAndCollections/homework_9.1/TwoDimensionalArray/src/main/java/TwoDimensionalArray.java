@@ -6,7 +6,7 @@ public class TwoDimensionalArray {
         char[][] cross = new char[size][size];
         for (int i = 0; i < cross.length; i++) {
             for (int j = 0; j < cross[i].length; j++) {
-                cross[i][j] = (i == j || j == cross.length - i - 1) ? 'X' : ' ';
+                cross[i][j] = (i == j || j == cross.length - i - 1) ? symbol : ' ';
             }
         }
         return cross;
