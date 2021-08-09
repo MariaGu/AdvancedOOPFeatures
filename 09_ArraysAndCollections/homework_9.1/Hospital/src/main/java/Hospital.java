@@ -2,8 +2,8 @@ public class Hospital {
 
     public static float[] generatePatientsTemperatures(int patientsCount) {
 
-        int minTemperature = 32;
-        int maxTemperature = 40;
+        final int minTemperature = 32;
+        final int maxTemperature = 40;
 
         float[] temperatureData = new float[patientsCount];
         for (int i = 0; i<patientsCount; i++){
@@ -17,8 +17,8 @@ public class Hospital {
 
         int healthyPatients = 0;
         float summedTemperature = 0;
-        float minHealthyTemperature = 36.2f;
-        float maxHealthyTemperature = 36.9f;
+        final float minHealthyTemperature = 36.2f;
+        final float maxHealthyTemperature = 36.9f;
         for (float temperature: temperatureData){
             if (temperature >= minHealthyTemperature && temperature <=maxHealthyTemperature){
                 healthyPatients++;
