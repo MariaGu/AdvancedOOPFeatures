@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: TodoListTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.143 s <<< FAILURE! - in TodoListTest
+addThreeTodos  Time elapsed: 0.03 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[send email, learn java, create app]> but was: <[write issue, buy milk, send email, learn java, create app]>
+	at TodoListTest.addThreeTodos(TodoListTest.java:38)
+
+addTodoToNotExistIndex  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[buy milk, write issue, create app, new todo]> but was: <[write issue, buy milk, send email, learn java, new todo, create app, buy milk, write issue, create app]>
+	at TodoListTest.addTodoToNotExistIndex(TodoListTest.java:58)
+
+deleteExistTodo  Time elapsed: 0.01 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[write issue, create app]> but was: <[write issue, send email, learn java, new todo, create app, buy milk, write issue, create app, write issue, learn java, create app]>
+	at TodoListTest.deleteExistTodo(TodoListTest.java:67)
+
+editExistTodo  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[write issue, new todo]> but was: <[write issue, new todo, learn java, new todo, create app, buy milk, write issue, create app, write issue, learn java, create app, write issue, buy milk]>
+	at TodoListTest.editExistTodo(TodoListTest.java:86)
+
+addSingleTodo  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[first added todo]> but was: <[write issue, new todo, learn java, new todo, create app, buy milk, write issue, create app, write issue, learn java, create app, write issue, buy milk, first added todo]>
+	at TodoListTest.addSingleTodo(TodoListTest.java:30)
+
+deleteNotExistTodo  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[learn java, learn java, learn java, send email, send email]> but was: <[write issue, new todo, learn java, new todo, create app, write issue, create app, write issue, learn java, create app, write issue, buy milk, first added todo, learn java, learn java, learn java, send email, send email]>
+	at TodoListTest.deleteNotExistTodo(TodoListTest.java:76)
+
+addTodoToExistIndex  Time elapsed: 0.022 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <[send email, new todo, send email, create app]> but was: <[write issue, new todo, new todo, learn java, new todo, create app, write issue, create app, write issue, learn java, create app, write issue, buy milk, first added todo, learn java, learn java, learn java, send email, send email, send email, send email, create app]>
+	at TodoListTest.addTodoToExistIndex(TodoListTest.java:48)
+
