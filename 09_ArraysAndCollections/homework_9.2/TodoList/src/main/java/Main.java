@@ -1,16 +1,33 @@
+import java.util.Scanner;
+
 public class Main {
     private static TodoList todoList = new TodoList();
 
     public static void main(String[] args) {
-        todoList.add("buy milk");
-        todoList.getTodos();
-        todoList.add(-10, "buy sugar");
-        todoList.getTodos();
-        todoList.add(100, "buy candies");
-        todoList.getTodos();
-        todoList.edit("take money", 100);
-        todoList.getTodos();
-        todoList.delete(2);
-        todoList.getTodos();
+
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            String command = scanner.next();
+            switch (command) {
+                case "LIST":
+                    todoList.getTodos();
+                    break;
+                case "ADD":
+                    if (scanner.hasNextInt()){
+                        todoList.add(scanner.nextInt(), scanner.nextLine());
+                    } else{
+                        todoList.add(scanner.nextLine());
+                    }
+                    break;
+                case "EDIT":
+                    int index = scanner.nextInt();
+                    String todo = scanner.nextLine();
+                    todoList.edit(todo, index);
+                    break;
+                case "DELETE":
+                    todoList.delete(scanner.nextInt());
+            }
+        }
     }
 }
+

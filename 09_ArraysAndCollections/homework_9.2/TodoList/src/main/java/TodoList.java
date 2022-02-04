@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class TodoList {
-    private static ArrayList<String> toDoList = new ArrayList();
+
+    private ArrayList<String> toDoList = new ArrayList();
 
     public void add(String todo) {
         toDoList.add(todo);
@@ -9,7 +10,7 @@ public class TodoList {
     }
 
     public void add(int index, String todo) {
-        if (index < 0 || index > toDoList.size()) {
+        if (index < 0 || index >= toDoList.size()) {
             this.add(todo);
         } else {
             toDoList.add(index, todo);
@@ -18,7 +19,7 @@ public class TodoList {
     }
 
     public void edit(String todo, int index) {
-        if (index < 0 || index > toDoList.size()) {
+        if (index < 0 || index >= toDoList.size()) {
             return;
         } else {
             String oldToDo = toDoList.get(index);
@@ -28,13 +29,13 @@ public class TodoList {
     }
 
     public void delete(int index) {
-        if (index < 0 || index > toDoList.size()) {
+        if (index < 0 || index >= toDoList.size()) {
             System.out.println("Дело с таким номером не существует");
             return;
         } else {
             String oldToDo = toDoList.get(index);
             toDoList.remove(index);
-            System.out.println("Дело " + oldToDo + " удалено");
+            System.out.println("Дело" + oldToDo + " удалено");
         }
     }
 
