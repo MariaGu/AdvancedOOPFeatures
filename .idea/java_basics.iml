@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/06_PrimitiveDataTypes/IntOrInteger/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/07_NumbersAndDates/Date/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/07_NumbersAndDates/GeometryCalculator/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/InheritanceAndPolymorphism/homework_4/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
