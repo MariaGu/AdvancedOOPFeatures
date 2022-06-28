@@ -8,13 +8,21 @@ public class Main {
 
     public static void main(String[] args) {
         List<Employee> staff = Employee.loadStaffFromFile(STAFF_TXT);
-        System.out.println(staff);
+        System.out.println("Unordered list");
+        printListEmployee(staff);
+        System.out.println("______________________________");
+        System.out.println("Ordered list");
         sortBySalaryAndAlphabet(staff);
-        System.out.println(staff);
+        printListEmployee(staff);
+
     }
 
     public static void sortBySalaryAndAlphabet(List<Employee> staff) {
 
         Collections.sort(staff, Comparator.comparing(Employee::getSalary).thenComparing(Employee::getName));
+    }
+
+    public static void printListEmployee(List<Employee> list) {
+        list.forEach(System.out::println);
     }
 }
